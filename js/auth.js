@@ -37,7 +37,7 @@ async function handleLogin(event) {
             localStorage.setItem('user', JSON.stringify(result.user));
 
             // Redirect to dashboard
-            window.location.href = 'dashboard.html';
+            window.location.href = '/frontend/dashboard.html';
         } else {
             showError(result.error || 'Login failed');
         }
