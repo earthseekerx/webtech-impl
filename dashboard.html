@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hospital Patient Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>🏥 HPM</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="active">📊 Dashboard</a>
+                <a href="patient-registration.html">👤 Patients</a>
+                <a href="appointments.html">📅 Appointments</a>
+                <a href="medical-records.html">📋 Records</a>
+                <a href="billing.html">💰 Billing</a>
+                <a href="#" onclick="logout()">🚪 Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span id="userWelcome">Welcome, User</span>
+                </div>
+            </header>
+
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Total Patients</h3>
+                    <div class="stat-number" id="totalPatients">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Today's Appointments</h3>
+                    <div class="stat-number" id="todayAppointments">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Bills</h3>
+                    <div class="stat-number" id="pendingBills">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Doctors</h3>
+                    <div class="stat-number" id="activeDoctors">0</div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="dashboard-section">
+                    <h2>Recent Appointments</h2>
+                    <div class="table-container">
+                        <table id="recentAppointments">
+                            <thead>
+                                <tr>
+                                    <th>Patient</th>
+                                    <th>Doctor</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
